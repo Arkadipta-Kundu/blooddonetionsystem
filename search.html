@@ -5,42 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Blood</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Search Blood</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="register.html">Register Donor</a>
-            <a href="inventory.html">Blood Inventory</a>
-            <a href="search.html">Search Blood</a>
-        </nav>
+    <header class="bg-danger text-white fixed-top">
+        <div class="container">
+            <h1 class="display-4">Search Blood</h1>
+            <nav class="nav">
+                <a class="nav-link text-white" href="index.html">Home</a>
+                <a class="nav-link text-white" href="register.html">Register Donor</a>
+                <a class="nav-link text-white" href="inventory.html">Blood Inventory</a>
+                <a class="nav-link text-white" href="search.html">Search Blood</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>Find Blood by Type</h2>
-        <label for="searchBloodType">Blood Type:</label>
-        <select id="searchBloodType">
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-            <option value="O+">O+</option>
-            <option value="O-">O-</option>
-        </select>
-        <button id="searchBtn">Search</button>
+    <main class="container mt-5 pt-5">
+        <section class="jumbotron text-center">
+            <h2 class="display-5">Find Blood by Type</h2>
+            <div class="form-group">
+                <label for="searchBloodType">Blood Type:</label>
+                <select id="searchBloodType" class="form-control">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+            <button id="searchBtn" class="btn btn-danger">Search</button>
 
-        <ul id="searchResults"></ul>
-    </section>
+            <ul id="searchResults" class="list-group mt-3"></ul>
+        </section>
+    </main>
 
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Blood Bank System</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 
